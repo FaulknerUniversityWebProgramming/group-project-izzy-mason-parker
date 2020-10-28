@@ -1,0 +1,44 @@
+
+.topHeaderRow{
+    background-color: black;
+    text-align:right;
+    display: block;
+    padding: .5em;
+    height: 13%;
+}
+#thr{
+    list-style:none;
+    display:inline-block;
+}
+header{
+    background-color: #6fa9c0;
+    height: 250px;
+}
+.bottomHeader{
+    display: grid;
+    grid-template-columns: 205px 3fr 1fr;
+}
+.logo{
+    width:200px;
+    height:200px;
+    object-fit: contain;
+}
+.name{
+    padding: 70px 0;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 2px;
+    
+}
+.submitForm{
+    padding: 90px 0;
+    float: left;
+    
+}
+
+
+
+    
+
+
+
+
