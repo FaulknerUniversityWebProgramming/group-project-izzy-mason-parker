@@ -11,7 +11,7 @@
     display:inline-block;
 }
 header{
-    background-color: #6fa9c0;
+    background-color: #be4949;
     height: 250px;
 }
 .bottomHeader{
@@ -22,12 +22,24 @@ header{
     width:200px;
     height:200px;
     object-fit: contain;
+    /*filter: invert(100%);*/
 }
 .name{
-    padding: 70px 0;
+    padding: 35px 0;
     font-family: 'Staatliches', cursive;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+    font-size: xx-large;
+    color: white;
     
+}
+ div > h2 > p{
+    margin-top: 0px;
+    font-size: initial;
+    letter-spacing: 6px;
+     
+}
+.panel{
+    font-family: 'Staatliches', cursive;
 }
 .submitForm{
     padding: 90px 0;
