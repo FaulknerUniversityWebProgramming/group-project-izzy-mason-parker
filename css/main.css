@@ -1,4 +1,3 @@
-
 .topHeaderRow{
     background-color: black;
     text-align:right;
@@ -22,7 +21,6 @@ header{
     width:200px;
     height:200px;
     object-fit: contain;
-    /*filter: invert(100%);*/
 }
 .name{
     padding: 35px 0;
@@ -41,10 +39,23 @@ header{
 .panel{
     font-family: 'Staatliches', cursive;
 }
+input[type=text]{
+    width: 20em;  
+    height: 2em;
+    border-color: #772a2a;
+}
 .submitForm{
     padding: 90px 0;
-    float: left;
+    float: none;
     
+}
+button{
+    padding: 6.5px;
+    border-color: #772a2a;
+    background-color: lightgray;
+}
+button:hover{
+    background-color: darkgray;
 }
 
 
