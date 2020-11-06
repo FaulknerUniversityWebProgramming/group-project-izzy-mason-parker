@@ -41,8 +41,7 @@ CREATE TABLE user (
   fname varchar(30) NOT NULL,
   lname varchar(40) NOT NULL,
   PRIMARY KEY (user_id),
-  UNIQUE KEY username (username),
-  UNIQUE KEY address (address)
+  UNIQUE KEY username (username)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
