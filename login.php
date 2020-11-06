@@ -1,5 +1,5 @@
 <?php 
-    include 'php/mainHeader.php';
+    include 'php/modifiedHeader.php';
 ?>
         <main>
             
