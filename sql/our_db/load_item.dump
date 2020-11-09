@@ -1,6 +1,7 @@
 INSERT INTO item (user_id, iname, category, price) VALUES
 (1, 'stuff', 'furniture', 394.42),
-(2, 'things', 'clothes', 420.69)
+(2, 'things', 'clothes', 420.69),
+(1, 'deck box', 'other', 25.00)
 
 
 

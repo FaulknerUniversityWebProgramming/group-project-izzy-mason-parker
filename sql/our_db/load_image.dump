@@ -1,0 +1,10 @@
+insert into image (item_id, img_path) values
+(2, 'group-project-izzy-mason-parker/sql/db_imgs/things.png'),
+(1, 'group-project-izzy-mason-parker/sql/db_imgs/stuff.png'),
+(3, 'group-project-izzy-mason-parker/sql/db_imgs/Magic-Grimoire-Spellbook-Leather-Deck-Box-3.jpg'),
+(1, 'group-project-izzy-mason-parker/sql/db_imgs/stuff2.jfif')
+
+
+
+
+

@@ -1,0 +1,82 @@
+
+
+
+!! TO LOAD THE DATABASE, CD INTO our_db AND RUN mysql -u root -p db < db.sql 
+!! OR RUN mysql -u root -p, THEN RUN source db.sql
+!! either should work, but you hve to be in the same directory
+
+
+
+
+shell> mysqldump --all-databases > dump.sql
+
+
+    shell> mysqldump --databases db1 db2 db3 > filename.sql
+    //don't need --databases if dumping only one database
+    shell> mysqldump test > filename.sql
+    //can also dump only tables from a database
+    shell> mysqldump test t1 t3 t7 > filename.sql
+    
+
+
+
+//if you are already running mysql, you can execute an SQL script file using the source command or \. command:
+mysql> source file_name
+mysql> \. file_name
+
+
+
+
+!! PAY ATTENTION TO THIS ONE
+!! this is a foreach loop that iterates through a search querry, could be vital for multiple images per item
+
+<?php
+$sentToID = $_SESSION['userID'];
+
+$query = "SELECT *
+          FROM messages
+          WHERE sentToID = '$sentToID'";
+
+$results = mysql_query($query);
+//$userData = mysql_fetch_array($results, MYSQL_ASSOC);
+
+foreach ($results as $result){
+    $messageID = $result['messageID'];
+    $sentFromID = $result['sentFromID'];
+    $subject = $result['subject'];
+    $body = $result['body'];
+    $dateTime = $result['dateTime'];
+
+    $query = "SELECT usertype 
+              FROM user
+              WHERE userID = '$sentFromID'";
+    $messageResult = mysql_query($query);
+    $messageData = mysql_fetch_array($messageResult, MYSQL_ASSOC);
+
+    $usertype = $messageData['usertype'];
+
+    $query = "SELECT * 
+              FROM $usertype
+              WHERE userID = '$sentFromID'";
+
+    $messageResult = mysql_query($query);
+    $messageData = mysql_fetch_array($messageResult, MYSQL_ASSOC);
+
+    if ($usertype == "jobseeker"){
+        $forname = $messageData['forename'];
+        $surname = $messageData['surname'];
+        echo "<div><p>" . $forename . " " . $surname . "</p>
+              <p>Subject: " . $subject ."</p>
+              <p>Body: " . $body . "</p></div>";
+    }
+    if ($usertype == "employer"){
+        $forname = $messageData['forename'];
+        $surname = $messageData['surname'];
+        $companyName = $messageData['companyName'];
+
+        echo "<div><p>" . $forename . " " . $surname . " - " . $companyName . "</p>
+              <p>Subject: " . $subject ."</p>
+              <p>Body: " . $body . "</p></div>";
+    }
+}
+?>

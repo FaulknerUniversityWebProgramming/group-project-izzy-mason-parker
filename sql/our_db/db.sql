@@ -28,7 +28,8 @@ USE db;
 --
 
 DROP TABLE IF EXISTS user,
-                     item;
+                     item,
+                     image;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE user (
@@ -58,31 +59,27 @@ CREATE TABLE item (
     
 );
 
+CREATE TABLE image(
+    img_id int(11) NOT NULL AUTO_INCREMENT,
+    item_id int(11) NOT NULL,
+    img_path VARCHAR(500) NOT NULL,
+    PRIMARY KEY(img_id),
+    FOREIGN KEY (item_id) REFERENCES item (item_id) ON DELETE CASCADE
+);
+
+
 --
--- Dumping data for table `user`
+-- Dumping data for tables
 --
 
-LOCK TABLES user WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
 
 SELECT 'LOADING user' as 'INFO';
-source group-project-izzy-mason-parker/sql/our_db/load_user.dump ;
-source group-project-izzy-mason-parker/sql/our_db/load_item.dump ;
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
+source load_user.dump ;
+SELECT 'LOADING item' as 'INFO';
+source load_item.dump ;
+SELECT 'LOADING image' as 'INFO';
+source load_image.dump ;
 
---
--- Dumping data for table `item`
---
-
-LOCK TABLES item WRITE;
-/*!40000 ALTER TABLE `item` DISABLE KEYS */;
-
-SELECT 'LOADING user' as 'INFO';
-source group-project-izzy-mason-parker/sql/our_db/load_user.dump ;
-source group-project-izzy-mason-parker/sql/our_db/load_item.dump ;
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
