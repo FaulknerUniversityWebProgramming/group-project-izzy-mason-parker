@@ -51,6 +51,7 @@ CREATE TABLE item (
     item_id INT(11) NOT NULL AUTO_INCREMENT,
     user_id INT(11) NOT NULL,
     iname VARCHAR(50) NOT NULL,
+    description VARCHAR(500) DEFAULT NULL,
     category VARCHAR(20) NOT NULL,
     price DOUBLE(15,2) NOT NULL DEFAULT 0,
     purchased BOOLEAN NOT NULL DEFAULT 0,
