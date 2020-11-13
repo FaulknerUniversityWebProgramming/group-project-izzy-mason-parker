@@ -21,7 +21,7 @@
                     $sql = "select it.iname, it.category, im.img_path from item it left join image im on it.item_id = im.item_id";
                     $query = $conn->query($sql);
                     foreach($query as $item){
-                        echo "<figure><img src='".$item['im.img_path']."'><figcaption>".$item['iname']." - ".$item['category']."</figcaption></figure>";
+                        echo "<figure><img src='/".$item['img_path']."' style='width:200px; height:200px;'><figcaption>".$item['iname']." - ".$item['category']."</figcaption></figure>";
                     }
                 ?>
             </div>    
