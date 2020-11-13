@@ -2,7 +2,7 @@
 
 
 !! TO LOAD THE DATABASE, CD INTO our_db AND RUN mysql -u root -p db < db.sql 
-!! OR RUN mysql -u root -p, THEN RUN source db.sql
+!! OR RUN mysql -u root, THEN RUN source db.sql
 !! either should work, but you hve to be in the same directory
 
 
