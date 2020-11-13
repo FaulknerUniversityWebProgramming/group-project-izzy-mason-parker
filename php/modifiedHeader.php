@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php 
+    include 'sql/our_db/db.sql';
+?>
 <html lang="en">
     <head>
         <title>Imp Trading</title>

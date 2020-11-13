@@ -1,5 +1,6 @@
 <?php 
     include 'php/mainHeader.php';
+    phpinfo();
 ?>
         <main>
             

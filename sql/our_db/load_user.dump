@@ -1,3 +1,4 @@
 INSERT INTO user (username, password, email, phone, address, fname, lname) VALUES 
 ('Xinophen','Phoenix1','mason.simonton@faulkner.edu',NULL,'5050 joe\'s fish camp rd wetumpka al 36092','Mason','Simonton'),
-('Tasty','69420','parker.allbritton@faulkner.edu',NULL,'5050 bill\'s fish camp rd wetumpka al 36092','Parker','Allbritton')
+('Tasty','69420','parker.allbritton@faulkner.edu',NULL,'5050 bill\'s fish camp rd wetumpka al 36092','Parker','Allbritton'),
+('Izamakzi','zientek1015','izabella.zientek@faulkner.edu',NULL,'5050 sally\'s fish camp rd wetumpka al 36092','Izabella','Zientek')
