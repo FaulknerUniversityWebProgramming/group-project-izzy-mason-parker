@@ -1,7 +1,7 @@
 <?php
     $server = 'localhost';
     $username = 'root';
-    $password = 'codio';
+    $password = '';
     $database = 'db';
     $conn = "";
 
