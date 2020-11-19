@@ -2,7 +2,18 @@ insert into image (item_id, img_path) values
 (2, 'group-project-izzy-mason-parker/sql/db_imgs/things.png'),
 (1, 'group-project-izzy-mason-parker/sql/db_imgs/stuff.png'),
 (3, 'group-project-izzy-mason-parker/sql/db_imgs/Magic-Grimoire-Spellbook-Leather-Deck-Box-3.jpg'),
-(1, 'group-project-izzy-mason-parker/sql/db_imgs/stuff2.jfif')
+(4, 'group-project-izzy-mason-parker/sql/db_imgs/stuff2.jfif'),
+(5, 'group-project-izzy-mason-parker/sql/db_imgs/stuff2.jfif'),
+(6, 'group-project-izzy-mason-parker/sql/db_imgs/stuff2.jfif'),
+(7, 'group-project-izzy-mason-parker/sql/db_imgs/stuff2.jfif'),
+(8, 'group-project-izzy-mason-parker/sql/db_imgs/stuff2.jfif'),
+(9, 'group-project-izzy-mason-parker/sql/db_imgs/stuff2.jfif'),
+(10, 'group-project-izzy-mason-parker/sql/db_imgs/Magic-Grimoire-Spellbook-Leather-Deck-Box-3.jpg'),
+(11, 'group-project-izzy-mason-parker/sql/db_imgs/Magic-Grimoire-Spellbook-Leather-Deck-Box-3.jpg'),
+(12, 'group-project-izzy-mason-parker/sql/db_imgs/Magic-Grimoire-Spellbook-Leather-Deck-Box-3.jpg'),
+(13, 'group-project-izzy-mason-parker/sql/db_imgs/Magic-Grimoire-Spellbook-Leather-Deck-Box-3.jpg'),
+(14, 'group-project-izzy-mason-parker/sql/db_imgs/Magic-Grimoire-Spellbook-Leather-Deck-Box-3.jpg'),
+(15, 'group-project-izzy-mason-parker/sql/db_imgs/Magic-Grimoire-Spellbook-Leather-Deck-Box-3.jpg')
 
 
 

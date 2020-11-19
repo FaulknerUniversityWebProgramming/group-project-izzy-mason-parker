@@ -1,9 +1,13 @@
+/*<!--Original Author: Izabella Zientek -->*/
+body{
+    background-color: white;
+}
 .topHeaderRow{
     background-color: black;
     text-align:right;
     /*display: block;*/
     padding: .5em;
-    height: 13%;
+    height: 20%;
 }
 #thr{
     list-style:none;
@@ -18,9 +22,11 @@ main{
     width: 100%;
 }
 footer{
-    /*width: 100%;*/
+    width: 100% !important;
     background-color: black;
-    color: black/*white*/;
+    color:white;
+    margin-bottom: inherit;
+    
 
 }
 .bottomHeader{
@@ -55,7 +61,7 @@ input[type=text]{
     border-color: #772a2a;
 }
 .submitForm{
-    padding: 90px 0;
+    padding: 50px 0;
     float: none;
     
 }
@@ -84,30 +90,32 @@ button:hover{
   text-decoration: none;
 }
 
-/* The dropdown container */
+
+/* The container <div> - needed to position the dropdown content */
 .dropdown {
   float: right;
   overflow: hidden;
 }
 
-/* Dropdown button */
+
 .dropdown .dropbtn {
   font-size: 16px;
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 10px 12px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit; 
+  margin: 0; 
+  overflow: hidden;
 }
 
-/* Add a red background color to navbar links on hover */
+
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #772a2a;
 }
 
-/* Dropdown content (hidden by default) */
+/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -115,33 +123,45 @@ button:hover{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 10px 12px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: lightgray;
-  color:  #772a2a;
-}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {  background-color: lightgray;
+  color:  #772a2a;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #772a2a;
+}
 
 
+#submitContact{
+    background-color: #772a2a;
+    color: white;
+}
+#submitContact:hover{
+    background-color: lightgray;
+    color: black;
+}
 
-    
+#submitter{
+    color:black !important;
+}
 
 
 

@@ -1,7 +1,20 @@
 INSERT INTO item (user_id, iname, description, category, price) VALUES
 (1, 'stuff', 'cool stuff', 'furniture', 394.42),
 (2, 'things', 'cooler things', 'clothes', 420.69),
-(1, 'deck box', 'a really fun box', 'other', 25.00)
+(1, 'deck box', 'a really fun box', 'other', 25.00),
+(3, 'stuff', 'a really fun toy', 'toys', 25.00),
+(1, 'stuff', 'a really fun toy', 'toys', 25.00),
+(2, 'stuff', 'a really fun toy', 'toys', 25.00),
+(3, 'stuff', 'a really fun toy', 'toys', 25.00),
+(1, 'stuff', 'a really fun toy', 'toys', 25.00),
+(2, 'stuff', 'a really fun toy', 'toys', 25.00),
+(3, 'deck box', 'a really fun box', 'miscellaneous', 25.00),
+(1, 'deck box', 'a really fun box', 'miscellaneous', 25.00),
+(2, 'deck box', 'a really fun box', 'miscellaneous', 25.00),
+(3, 'deck box', 'a really fun box', 'miscellaneous', 25.00),
+(1, 'deck box', 'a really fun box', 'miscellaneous', 25.00),
+(2, 'deck box', 'a really fun box', 'miscellaneous', 25.00)
+
 
 
 

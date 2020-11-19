@@ -1,6 +1,7 @@
+<!--Original Author: Izabella Zientek -->
 <!DOCTYPE html>
 <?php 
-    include 'sql/our_db/db.sql';
+    include 'sql/our_db/db.php';
 ?>
 <html lang="en">
     <head>
@@ -12,7 +13,7 @@
     <body>
        <header style="height:205px;">
            <div class="bottomHeader">
-               <div><img src="images/imp.png" class="logo"></div>
+               <div><a href="home.php"><img src="images/imp.png" class="logo"></a></div>
                <div class="name"><h2>Imp Trading<br><p>Devilishly Good Prices</p></h2></div>
                <div class="submitForm">
                    <form class="navbar-form" >
