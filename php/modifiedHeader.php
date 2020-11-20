@@ -7,8 +7,9 @@
     <head>
         <title>Imp Trading</title>
         <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/bootstrap1.css">
         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
        <header style="height:205px;">
