@@ -1,5 +1,19 @@
 <?php 
-    include 'php/modifiedHeader.php';
+    include 'php/mainHeader.php';
+$msg = "";
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+   
+    $user = $_POST["username"];
+    $stmt = $conn->prepare("select first_name, username, password from user where username = ?");
+    $stmt->execute([$user]);
+    $login = $stmt->fetch(PDO::FETCH_ASSOC);
+    if ($_POST['username'] == $login["username"] && $_POST['password'] == $login["password"]) {
+        $_SESSION['user'] = $_POST['username'];
+        $_SESSION['name'] = $login['first_name'];
+    }
+        $msg = "User Logged In";
+    }
+   
 ?>
         <main>
     <h1 style="text-align:center;">Login</h1>

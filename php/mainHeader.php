@@ -1,6 +1,10 @@
 <!--Original Author: Izabella Zientek -->
 <?php
     include 'sql/our_db/db.php';
+    include 'cors.php';
+    session_start();
+    $_SESSION['user'];
+    $_SESSION["name"];
 ?>
 
 <html lang="en">
@@ -12,6 +16,7 @@
         <link rel="stylesheet" href="css/main.css" />      
     </head>
     <body>
+        
        <header>    
            <div class="topHeaderRow">
                <div class="nav">
@@ -23,7 +28,7 @@
                           <a href="userPost.php">My Posts</a>
                           <a href="post.php">Post</a>
                           <a href="login.php">Login</a>
-                          <a href="#">Logout</a>
+                          <a href="logout.php">Logout</a>
                         </div>
                      </div>
                </div>

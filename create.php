@@ -1,6 +1,6 @@
 <!--Original Author: Izabella Zientek -->
 <?php
-    include 'php/modifiedHeader.php';
+    include 'php/mainHeader.php';
     $msg = "";
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         
