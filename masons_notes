@@ -1,4 +1,10 @@
-
+!!CREATE A GUEST USER IN YOUR DATABASE
+!!IN MYSQL: create user guest@localhost;
+!!revoke all privileges on *.* from guest@localhost;
+!!grant select on db.* to guest@localhost;
+!! eventually i will have login up and running, and when that happens, we'll have a default guest user with no permissions
+!! except to view current items. hopefully when he views them, he'll be redirected to login upon trying to buy or post his own item.
+!! if you don't have the guest user in your database when this happens, the website will no longer load the database.
 
 
 !! TO LOAD THE DATABASE, CD INTO our_db AND RUN mysql -u root -p db < db.sql 
@@ -8,7 +14,7 @@
 
 
 
-shell> mysqldump --all-databases > dump.sql
+shell> mysqldump --all-databases > db.sql
 
 
     shell> mysqldump --databases db1 db2 db3 > filename.sql
