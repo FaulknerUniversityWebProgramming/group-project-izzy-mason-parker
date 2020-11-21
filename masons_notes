@@ -1,10 +1,25 @@
-!!CREATE A GUEST USER IN YOUR DATABASE
-!!IN MYSQL: create user guest@localhost;
-!!revoke all privileges on *.* from guest@localhost;
-!!grant select on db.* to guest@localhost;
-!! eventually i will have login up and running, and when that happens, we'll have a default guest user with no permissions
-!! except to view current items. hopefully when he views them, he'll be redirected to login upon trying to buy or post his own item.
-!! if you don't have the guest user in your database when this happens, the website will no longer load the database.
+!!LOGIN NOW AVAIABLE
+all files will need to use mainHeader for session to function, you can use the $_SESSION["user"] variable as 
+part of your select or insert statements, so either:
+
+stmt = prepare->("select * from user where username = ?");
+stmt->execute([$_SESSION["user"]]);
+
+or
+
+stmt = prepare->("select * from user where username = :user");
+stmt->bindParam(":user", $_SESSION("user"));
+stmt->execute();
+
+should work fine. also, add:
+if(!isset($_SESSION['user'])){
+        header("location: login.php");
+}
+to any page where you would need to be logged in to see. most likely post and myposts will
+need the login check. put this code RIGHT underneath include mainheader.
+    
+    
+    
 
 
 !! TO LOAD THE DATABASE, CD INTO our_db AND RUN mysql -u root -p db < db.sql 

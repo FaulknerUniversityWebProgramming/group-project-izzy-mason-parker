@@ -5,6 +5,7 @@
     session_start();
     $_SESSION['user'];
     $_SESSION["name"];
+    setcookie('user');
 ?>
 
 <html lang="en">

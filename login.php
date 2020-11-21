@@ -4,12 +4,15 @@ $msg = "";
     if($_SERVER["REQUEST_METHOD"] == "POST"){
    
     $user = $_POST["username"];
-    $stmt = $conn->prepare("select first_name, username, password from user where username = ?");
+    $stmt = $conn->prepare("select fname, username, password from user where username = ?");
     $stmt->execute([$user]);
     $login = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($_POST['username'] == $login["username"] && $_POST['password'] == $login["password"]) {
         $_SESSION['user'] = $_POST['username'];
-        $_SESSION['name'] = $login['first_name'];
+        $_SESSION['name'] = $login['fname'];
+        header("location: home.php");
+    }else{
+        echo "Incorrect Login Information";
     }
         $msg = "User Logged In";
     }
@@ -25,7 +28,12 @@ $msg = "";
             <br>
             <input type="text" placeholder="Password" name = "password" required />
             <br>
-            <br>         
+            <br>
+            <input type="checkbox" name="remember" id="remember"
+                <?php if(isset($_COOKIE["user"])) { ?> checked
+                <?php } ?> /> <label for="remember-me">Remember me</label>
+            <br>
+            <br>
             <input type="submit" name = "submit" value ="Submit"/>   
         </form>
         <br>
