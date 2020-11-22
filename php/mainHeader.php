@@ -5,7 +5,8 @@
     session_start();
     $_SESSION['user'];
     $_SESSION["name"];
-    setcookie('user');
+    
+   
 ?>
 
 <html lang="en">
@@ -36,7 +37,7 @@
            </div>
            <div class="bottomHeader">
                <div><a href="home.php"><img src="images/imp.png" class="logo"></a></div>
-               <div class="name"><h2 style="font-family: 'Staatliches', cursive;">Imp Trading<br><p>Devilishly Good Prices</p></h2></div>
+               <div class="name"><h2 style="font-family: 'Staatliches', cursive;">Imp Trading<br><p>Devilishly Good Prices<br><?php if(isset($_SESSION['user'])){echo "Welcome ".$_SESSION['name']."!";}?></p></h2></div>
                <div class="submitForm">
                    <form class="navbar-form" >
                      <input type="text" name="search" placeholder="Search">

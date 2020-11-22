@@ -1,5 +1,10 @@
 <?php 
     include 'php/mainHeader.php';
+    if(isset($_COOKIE['user']) && $_COOKIE['user'] != NULL){
+        setcookie('user', $_SESSION['user'], time() + (86400 * 30), "/");
+        setcookie('name', $_SESSION['name'], time() + (86400 * 30), "/");
+        header("location: home.php");
+    }
 $msg = "";
     if($_SERVER["REQUEST_METHOD"] == "POST"){
    
@@ -10,6 +15,10 @@ $msg = "";
     if ($_POST['username'] == $login["username"] && $_POST['password'] == $login["password"]) {
         $_SESSION['user'] = $_POST['username'];
         $_SESSION['name'] = $login['fname'];
+        if($_POST['remember'] == 'yes'){
+            setcookie('user', $_SESSION['user'], time() + (86400 * 30), "/");
+            setcookie('name', $_SESSION['name'], time() + (86400 * 30), "/");
+        }
         header("location: home.php");
     }else{
         echo "Incorrect Login Information";
@@ -29,9 +38,7 @@ $msg = "";
             <input type="text" placeholder="Password" name = "password" required />
             <br>
             <br>
-            <input type="checkbox" name="remember" id="remember"
-                <?php if(isset($_COOKIE["user"])) { ?> checked
-                <?php } ?> /> <label for="remember-me">Remember me</label>
+            <input type="checkbox" name="remember" id="remember" value="yes"/> <label for="remember-me">Remember me</label>
             <br>
             <br>
             <input type="submit" name = "submit" value ="Submit"/>   

@@ -1,3 +1,12 @@
+!!COOKIES ARE DONE
+- topbar will now display a welcome page if you are logged in
+- log in has a remember me option which sets cookies, cookies are set to null by logout page.
+- DO NOT DELETE COOKIES, THE SITE SEEMS TO CRASH. might have just been a syntax error i fixed
+but still try to be careful.
+
+I think that was the last of my duties, please inform me if i missed something.
+
+
 !!LOGIN NOW AVAIABLE
 all files will need to use mainHeader for session to function, you can use the $_SESSION["user"] variable as 
 part of your select or insert statements, so either:
