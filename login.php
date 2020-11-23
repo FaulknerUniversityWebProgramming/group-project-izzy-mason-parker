@@ -2,7 +2,7 @@
     include 'php/mainHeader.php';
     if(isset($_COOKIE['id']) && $_COOKIE['id'] != NULL){
         setcookie('user', $_SESSION['user'], time() + (86400 * 30), "/");
-        setcookie('id' $_SESSION['id'], time() + (86400 * 30), "/")
+        setcookie('id', $_SESSION['id'], time() + (86400 * 30), "/");
         setcookie('name', $_SESSION['name'], time() + (86400 * 30), "/");
         header("location: home.php");
     }
@@ -15,7 +15,7 @@ $msg = "";
     $login = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($_POST['username'] == $login["username"] && $_POST['password'] == $login["password"]) {
         $_SESSION['user'] = $_POST['username'];
-        $_SESSION['id'] = $login['id'];
+        $_SESSION['id'] = $login['user_id'];
         $_SESSION['name'] = $login['fname'];
         if($_POST['remember'] == 'yes'){
             setcookie('user', $_SESSION['user'], time() + (86400 * 30), "/");
