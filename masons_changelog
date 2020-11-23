@@ -1,3 +1,7 @@
+!!IMPORTANT FOR REGISTERING COOKIES AND SESSIONS
+- added $_SESSION['id'] for the user id, logout should sill process the same, use the id in place of user
+
+
 !!COOKIES ARE DONE
 - topbar will now display a welcome page if you are logged in
 - log in has a remember me option which sets cookies, cookies are set to null by logout page.

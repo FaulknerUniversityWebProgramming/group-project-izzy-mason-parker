@@ -4,6 +4,7 @@
     include 'cors.php';
     session_start();
     $_SESSION['user'];
+    $_SESSION['id'];
     $_SESSION["name"];
     
    

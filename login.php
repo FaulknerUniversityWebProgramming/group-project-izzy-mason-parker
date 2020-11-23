@@ -1,7 +1,8 @@
 <?php 
     include 'php/mainHeader.php';
-    if(isset($_COOKIE['user']) && $_COOKIE['user'] != NULL){
+    if(isset($_COOKIE['id']) && $_COOKIE['id'] != NULL){
         setcookie('user', $_SESSION['user'], time() + (86400 * 30), "/");
+        setcookie('id' $_SESSION['id'], time() + (86400 * 30), "/")
         setcookie('name', $_SESSION['name'], time() + (86400 * 30), "/");
         header("location: home.php");
     }
@@ -9,14 +10,16 @@ $msg = "";
     if($_SERVER["REQUEST_METHOD"] == "POST"){
    
     $user = $_POST["username"];
-    $stmt = $conn->prepare("select fname, username, password from user where username = ?");
+    $stmt = $conn->prepare("select fname, user_id, username, password from user where username = ?");
     $stmt->execute([$user]);
     $login = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($_POST['username'] == $login["username"] && $_POST['password'] == $login["password"]) {
         $_SESSION['user'] = $_POST['username'];
+        $_SESSION['id'] = $login['id'];
         $_SESSION['name'] = $login['fname'];
         if($_POST['remember'] == 'yes'){
             setcookie('user', $_SESSION['user'], time() + (86400 * 30), "/");
+            setcookie('id', $_SESSION['id'], time() + (86400 * 30), "/" );
             setcookie('name', $_SESSION['name'], time() + (86400 * 30), "/");
         }
         header("location: home.php");
