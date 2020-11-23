@@ -29,7 +29,7 @@
                         </button>
                         <div class="dropdown-content" style="font-family: 'Staatliches', cursive;">
                           <a href="userPost.php">My Posts</a>
-                          <a href="post.php">Post</a>
+                          <a href="post.php">New Post</a>
                           <a href="login.php">Login</a>
                           <a href="logout.php">Logout</a>
                         </div>

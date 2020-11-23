@@ -1,6 +1,9 @@
 <!--Original Author: Izabella Zientek -->
 <?php
     include 'php/mainHeader.php';
+    if(!isset($_SESSION['id'])){
+        header("location: login.php");
+    }
 ?>
         <main class="row">
              <aside class="col-md-2" >

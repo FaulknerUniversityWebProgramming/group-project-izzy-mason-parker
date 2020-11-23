@@ -55,7 +55,7 @@ footer{
 .panel{
     font-family: 'Staatliches', cursive;
 }
-input[type=text]{
+input[type=text], input[type=password]{
     width: 20em;  
     height: 2em;
     border-color: #772a2a;
