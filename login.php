@@ -38,7 +38,7 @@ $msg = "";
             <input type="text" placeholder="Username" name = "username" required />
             <br>
             <br>
-            <input type="text" placeholder="Password" name = "password" required />
+            <input type="password" placeholder="Password" name = "password" required />
             <br>
             <br>
             <input type="checkbox" name="remember" id="remember" value="yes"/> <label for="remember-me">Remember me</label>

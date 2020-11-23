@@ -20,7 +20,7 @@
                 <h1 style="text-align:center;font-family: 'Staatliches', cursive; color:black;"><strong>Your Posts</strong></h1>
 
                 <?php 
-                    $sql = "select it.iname, it.description, it.category, im.img_path from item it left join image im on it.item_id = im.item_id where it.user_id = 3";
+                    $sql = "select it.iname, it.description, it.category, im.img_path from item it left join image im on it.item_id = im.item_id where it.user_id = ".$_SESSION['id']."";
                     $query = $conn->query($sql);
                     foreach($query as $item){
                             echo "<figure style='float:left;margin-right:5%'><img src='/".$item['img_path']."' style='width:200px; height:200px;'><figcaption>".$item['iname']." - ".$item['description']."<br>".$item['category']."</figcaption></figure>";
