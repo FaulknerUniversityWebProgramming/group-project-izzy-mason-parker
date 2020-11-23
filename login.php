@@ -4,7 +4,7 @@
         setcookie('user', $_SESSION['user'], time() + (86400 * 30), "/");
         setcookie('id', $_SESSION['id'], time() + (86400 * 30), "/");
         setcookie('name', $_SESSION['name'], time() + (86400 * 30), "/");
-        header("location: home.php");
+        header("location: index.php");
     }
 $msg = "";
     if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -22,7 +22,7 @@ $msg = "";
             setcookie('id', $_SESSION['id'], time() + (86400 * 30), "/" );
             setcookie('name', $_SESSION['name'], time() + (86400 * 30), "/");
         }
-        header("location: home.php");
+        header("location: index.php");
     }else{
         echo "Incorrect Login Information";
     }

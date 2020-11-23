@@ -6,7 +6,7 @@ include 'php/mainHeader.php';
     setcookie('user');
     setcookie('id');
     setcookie('name');
-    header("location: home.php");
+    header("location: index.php");
 
 include 'footer.php';
 ?>

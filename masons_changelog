@@ -1,3 +1,7 @@
+!!VERY IMPORTANT
+- change home.php to index.php so it automatically loads
+
+
 !!IMPORTANT FOR REGISTERING COOKIES AND SESSIONS
 - added $_SESSION['id'] for the user id, logout should sill process the same, use the id in place of user
 
