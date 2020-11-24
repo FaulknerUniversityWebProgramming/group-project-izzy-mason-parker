@@ -1,3 +1,4 @@
+<!--Original Author: Mason Simonton -->
 <?php
 include 'header.php';
 
