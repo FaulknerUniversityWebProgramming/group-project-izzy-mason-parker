@@ -10,7 +10,7 @@ include 'php/mainHeader.php';
         $stmt->bindParam(":itemid", $result);
         $stmt->bindParam(":path", $path);
 
-        $path =$_FILES['img_path'];
+        $path ="group-porject-izzy-mason-parker/sql/db_imgs/".$_FILES['fileToUpload']['name'];
 
         $stmt->execute();
        
@@ -23,7 +23,7 @@ include 'php/mainHeader.php';
      <div class="form" style="text-align:center;">
        <form action="upload.php" method="post" enctype="multipart/form-data">
           <input type="file" name="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
+          <input type="submit" value="Upload Image" name="submitImage">
        </form> 
     </div>
     <?php
