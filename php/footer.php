@@ -3,7 +3,7 @@
         <div class="col-md-8" >
             <h3 style="font-family: 'Staatliches', cursive;">Imp Trading</h3>
             <p>This website was created for the completion of Faulkner Univerity's Internet Programming course's required Group Project.
-            This project is completed by Izabella Zientek, Mason Simonton, and Parker Albritton. To complete all deliverables, we decided to do a Buy and Sell Website called
+            This project is completed by Izabella Zientek, Mason Simonton, and Parker Allbritton. To complete all deliverables, we decided to do a Buy and Sell Website called
             Imp Trading.</p>
             <div class="row">
                 <div class="col-md-6">
