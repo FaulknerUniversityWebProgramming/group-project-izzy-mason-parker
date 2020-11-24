@@ -1,3 +1,5 @@
+--Original Author: Mason Simonton -->
+
 -- MySQL dump 10.13  Distrib 5.5.59, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: db
@@ -73,6 +75,7 @@ CREATE TABLE image(
 -- Dumping data for tables
 --
 
+--Original Author For Each: Mason Simonton -->
 
 SELECT 'LOADING user' as 'INFO';
 source load_user.dump ;

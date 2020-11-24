@@ -1,3 +1,4 @@
+<!--Original Author: Mason Simonton -->
 <?php 
     include 'php/mainHeader.php';
     if(isset($_COOKIE['id']) && $_COOKIE['id'] != NULL){

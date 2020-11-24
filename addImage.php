@@ -10,7 +10,7 @@ include 'php/mainHeader.php';
         $stmt->bindParam(":itemid", $result);
         $stmt->bindParam(":path", $path);
 
-        $path =$_FILES['img_path']['name'];
+        $path =$_FILES['img_path'];
 
         $stmt->execute();
        
@@ -21,8 +21,8 @@ include 'php/mainHeader.php';
      <h1 style="text-align:center;">Add an Image</h1>
     <br>
      <div class="form" style="text-align:center;">
-       <form action="<?php  echo $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data">
-          <input type="file" name="img_path">
+       <form action="upload.php" method="post" enctype="multipart/form-data">
+          <input type="file" name="fileToUpload">
           <input type="submit" value="Upload Image" name="submit">
        </form> 
     </div>
