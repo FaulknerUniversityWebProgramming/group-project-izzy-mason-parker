@@ -1,3 +1,11 @@
+!!PLAYED WITH PICS A BIT
+- added upload.php, code actually came from w3 schools, looks solid, will need tweeking.
+- the file HAS to be uploaded to sql/db_imgs, and the exact path name HAS to be in database.
+- this is actually how the database reads the images, you can't put actual images in a database
+without HEAVILY configuring said database. for now, i'd focus on putting a little temp image
+in place of items that dn't have images.
+
+
 !!VERY IMPORTANT
 - change home.php to index.php so it automatically loads
 
