@@ -4,6 +4,7 @@ include 'php/mainHeader.php';
     
     unset($_SESSION['user']);
     unset($_SESSION['name']);
+    unset($_SESSION['id']);
     setcookie('user');
     setcookie('id');
     setcookie('name');
