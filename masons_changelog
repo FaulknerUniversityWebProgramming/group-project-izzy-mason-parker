@@ -4,6 +4,8 @@
 - this is actually how the database reads the images, you can't put actual images in a database
 without HEAVILY configuring said database. for now, i'd focus on putting a little temp image
 in place of items that dn't have images.
+- also, i removed the direct connection into our site to allow to read phpinfo.php, which shows
+info about the php.ini file.
 
 
 !!VERY IMPORTANT
