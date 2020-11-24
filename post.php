@@ -1,4 +1,4 @@
-<!--Original Authro: Izabella Zientek -->
+<!--Original Authro: Izabella Zientek, Parker Albritton to do FixerAPI on price -->
 <?php 
     include 'php/mainHeader.php';
     if(!isset($_SESSION['id'])){
